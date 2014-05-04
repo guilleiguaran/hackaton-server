@@ -4,6 +4,10 @@ require 'nokogiri'
 require 'yajl'
 
 class App < Nancy::Base
+  after do
+    response['Content-Type'] = 'application/json'
+  end
+
   get "/" do
     "Pastelitos: 8, Jugos: 12, Almuerzos: 1, Porciones de Pizza:, Sanduches:"
   end

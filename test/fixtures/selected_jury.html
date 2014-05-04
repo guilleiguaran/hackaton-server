@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Jurados de votación - RNEC</title>
+        <link href="consultar_jurados_data/estilo.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="consultar_jurados_data/jquery-1.js"></script>
+               <link href="consultar_jurados_data/estiloregis.css" rel="stylesheet" type="text/css">
+		<link href="../../css/estilos.css" rel="stylesheet" >
+        <script>
+
+            function solonumeros(evt)
+            {
+
+                var charCode = (evt.which) ? evt.which : event.keyCode
+               if (charCode!=8 &&(charCode < 48 || charCode > 57)){
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+        <script>
+
+            ;
+
+
+            function GetUrlValue(VarSearch) {
+                var SearchString = window.parent.location.search.substring(1);
+                var VariableArray = SearchString.split('&');
+                for (var i = 0; i < VariableArray.length; i++) {
+                    var KeyValuePair = VariableArray[i].split('=');
+                    if (KeyValuePair[0] == VarSearch) {
+                      
+                        document.getElementById('cedula').value = KeyValuePair[1];
+                       // document.getElementById("frmconsulta").submit();
+                       
+                    }
+                }
+            }
+        </script>
+
+
+        <script src="consultar_jurados_data/SpryMenuBar.js" type="text/javascript"></script>
+
+        <link href="consultar_jurados_data/SpryMenuBarHorizontal2.css" rel="stylesheet" type="text/css">    <style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+
+</style></head>
+    <body >
+        <div id="contenedor">
+            
+            <div id="header">
+<a target="_top" href="http://www.registraduria.gov.co/">
+    <img src="consultar_jurados_data/header.jpg" alt="Registraduria Nacional del Estado Civil">
+</a>
+</div>
+
+<div class="menupal"> 
+   <div class="fmenu"> 
+      <ul id="MenuBar1" class="MenuBarHorizontal"> 
+       	<li><a href="http://wsr.registraduria.gov.co">Inicio</a></li> 
+
+    <li><a class="MenuBarItemSubmenu" href="http://www.registraduria.gov.co/-Entidad-.html" onClick="return false;">Entidad</a>
+    
+    <ul>
+    
+    	<li><a href="http://www.registraduria.gov.co/-65-anos-de-la-Registraduria-.html">65 años de la Registraduría</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Mision-Vision-.html">Misión/Visión</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Funciones-de-la-Registraduria-.html">Funciones de la Registraduría</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Conformacion-Organizacion-.html">Conformación Organización Electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Organigrama-directivo-.html">Organigrama directivo</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Normatividad,196-.html">Normatividad</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Himno-de-la-Registraduria-.html">Himno de la Registraduria</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Compromiso-Etico-.html">Compromiso Ético</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Fondo-social-de-vivienda-.html">Fondo social de vivienda</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Carlos-Ariel-Sanchez-Torres-.html">Carlos Ariel Sánchez Torres</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Registradores-de-Colombia,318-.html">Registradores de Colombia</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Ciudadano-Derechos-y-Deberes,319-.html">Ciudadano: Derechos y Deberes</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Historia-de-la-Cedula-de,321-.html">Historia de la Cédula de Ciudadanía</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Historia-del-voto-en-Colombia-.html">Historia del voto en Colombia</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Directorios-.html">Directorios</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Nivelacion-salarial-.html">Nivelación salarial</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Biblioteca-Gustavo-Ardila-Duarte-.html">Biblioteca Gustavo Ardila Duarte</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Carrera-Administrativa-Especial-.html">Carrera Administrativa Especial</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Buzon-de-correo-para-.html">Buzón de correo para notificaciones judiciales</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Directorio-.html" onClick="return false;">Directorio</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Directorio-Oficinas-Centrales-.html">Oficinas Centrales Bogotá</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Directorio-Registradurias-Bogota-.html">Registradurías Bogotá</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Registradurias-Colombia,18-.html">Registradurías Colombia</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Codigos-Postales-de-las-.html">Códigos Postales de las Registraduriás en Colombia</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Delegaciones-.html" onClick="return false;">Delegaciones</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Amazonas-.html">Amazonas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Antioquia-.html">Antioquia</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Arauca-.html">Arauca</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Atlantico-.html">Atlántico</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Bogota-.html">Bogotá</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Bolivar-.html">Bolívar</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Boyaca-.html">Boyacá</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Caldas-.html">Caldas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Caqueta-.html">Caquetá</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Casanare-.html">Casanare</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Cauca-.html">Cauca</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Cesar-.html">Cesar</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Choco-.html">Chocó</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Cordoba-.html">Córdoba</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Cundinamarca-.html">Cundinamarca</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Guainia-.html">Guainía</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Guaviare-.html">Guaviare</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Huila-.html">Huila</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Laguajira-.html">La Guajira</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Magdalena-.html">Magdalena</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Meta-.html">Meta</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Narino-.html">Nariño</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Norte-de-Santander,594-.html">Norte de Santander</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Putumayo-.html">Putumayo</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Quindio-.html">Quindío</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Risaralda-.html">Risaralda</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-San-Andres,598-.html">San Andrés</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Santander-.html">Santander</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Sucre-.html">Sucre</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Tolima-.html">Tolima</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Valle-.html">Valle</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Vaupes-.html">Vaupés</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Vichada-.html">Vichada</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Gestion-Institucional-.html" onClick="return false;">Gestión Institucional</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Plan-Anticorrupcion-y-de-Atencion-.html">Plan Anticorrupción y de Atención al Ciudadano</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Plan-Estrategico-.html">Plan Estratégico </a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Plan-de-Accion-.html">Plan de Acción</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Mapa-de-Riesgos-Institucional,265-.html">Mapa de Riesgos Institucional</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Mapa-de-Procesos-.html">Mapa de Procesos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Plan-de-Compras-.html">Plan de Compras</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Plan-de-Mejoramiento-.html">Plan de Mejoramiento</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Proyectos-de-Inversion-.html">Proyectos de Inversión</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Presupuesto-.html">Presupuesto</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Ejecucion-Presupuestal-.html">Ejecución Presupuestal</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Estados-Financieros-.html">Estados Financieros</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Informe-de-Gestion-.html">Informe de Gestión</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Comite-de-Conciliacion-.html">Comité de Conciliación</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Inventario-y-baja-de-bienes-.html">Inventario y baja de bienes</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Tutelas-.html">Tutelas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Gestion-Ambiental,284-.html">Gestión Ambiental</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Gestion-Documental-.html">Gestión Documental</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Gobierno-en-Linea,2233-.html">Gobierno en Linea</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Compromiso-Etico,285-.html">Compromiso Ético</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Rendicion-de-cuentas-.html">Rendición de cuentas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Control-Interno-.html">Control Interno</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Control-externo-.html">Control externo</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Publicacion-actos-administrativos,2269-.html">Publicación actos administrativos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Notificacion-por-aviso-.html">Notificación por aviso</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Notificaciones-por-Mandamiento-de-.html">Notificaciones por Mandamiento de pago </a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Comite-de-Conciliacion-y-Defensa-.html">Comité de Conciliación y Defensa Judicial</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Contratacion-.html" onClick="return false;">Contratación</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Contrataciones-hasta-Agosto-17-de-.html">Contrataciones (hasta Agosto 17 de 2006)</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Portal-Unico-de-Contratacion-desde-.html">Colombia Compra Eficiente</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Licitaciones-2013-.html">Licitaciones 2013</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Licitaciones-2012-.html">Licitaciones 2012</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Invitaciones-publicas-.html">Invitaciones públicas 2013</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Enajenacion-de-bienes-inmuebles-.html">Enajenación de bienes inmuebles</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Enajenacion-de-elementos-dados-de-.html">Enajenación de elementos dados de baja</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Donaciones-.html">Donaciones</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Formatos,2054-.html">Formatos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Manual-de-Contratacion-.html">Manual de Contratación</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Tramites-.html" onClick="return false;">Identificación</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Ley-Antitramites-.html">Ley Antitrámites</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Registro-Civil-.html">Registro Civil</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Tarjeta-de-Identidad-.html">Tarjeta de Identidad</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Cedula-de-ciudadania-.html">Cédula de ciudadania</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Colombianos-en-el-Exterior,328-.html">Colombianos en el Exterior</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Normatividad-.html">Normatividad</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-UDAPV,286-.html">UDAPV</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Jornada-Nacional-de-Registro-Civil,407-.html">Jornada Nacional de Registro Civil de Nacimiento</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-OPADI,486-.html">OPADI</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-El-parche-del-regi-.html">El parche del regi</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Electoral,43-.html" onClick="return false;">Electoral</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Elecciones-Atipicas,362-.html">Elecciones Atípicas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Mecanismos-de-Participacion,320-.html">Mecanismos de Participación Ciudadana</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Inscripcion-de-cedulas-2013-.html">Inscripción de cédulas 2013</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Ciclo-de-Foros-Garantias,298-.html">Ciclo de Foros Garantías Electorales Elecciones 2014</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Ciclo-de-talleres-de-capacitacion-.html">Ciclo de talleres de capacitación y pedagogía electoral 2014</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Consultas-de-partidos-y,2221-.html">Consultas de partidos y movimientos políticos 2013</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Elecciones-2014,1995-.html">Elecciones 2014</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Mapas-de-Riesgo,2333-.html">Mapas de Riesgo</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Consulta-Area-Metropolitana-.html">Consulta Área Metropolitana </a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Balance-elecciones-anteriores-y-.html">Balance elecciones anteriores y consultas</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Voto-electronico-.html">Voto electrónico</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Biometria,340-.html">Biometría</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Formulario-para-recoleccion-de,1955-.html">Formulario para recolección de apoyos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Reforma-Politica-.html">Reforma Política</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Glosario-electoral,225-.html">Glosario electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Normatividad-Electoral-.html">Normatividad Electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Historico-de-Resultados-.html">Histórico de Resultados Electorales</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Resoluciones-.html">Resoluciones</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Censo-Electoral-.html">Censo Electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Gestion-Electoral-.html">Gestión Electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Trashumancia-.html">Trashumancia</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Partidos-y-movimientos-politicos,317-.html">Partidos y movimientos políticos</a></li>
+    
+    </ul>
+    
+    </li>
+
+    <li><a class="MenuBarItemSubmenu" href="http://wsr.registraduria.gov.co/-Prensa-.html" onClick="return false;">Prensa</a>
+    
+    <ul>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Comunicados-de-prensa-.html">Comunicados de prensa</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Revista-Nuestra-Huella-.html">Revista Nuestra Huella</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Redes-Sociales-.html">Redes Sociales</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Registra-Tv-.html">Registra Tv</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Videos-de-interes-.html">Videos de interés</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Galeria-de-Fotos-.html">Galería de Fotos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Boletin-semanal-.html">Boletin semanal</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Boletin-Diario-.html">Boletín Electoral</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Periodico-Mural-.html">Periodico Mural</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Encuesta-.html">Sondeos</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Foros,2005-.html">Foros</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Suscribase-a-nuestros-boletines-.html">Suscríbase a nuestros boletines</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-Evento-.html">Evento</a></li>
+    
+    	<li><a href="http://wsr.registraduria.gov.co/-RSS,2049-.html">RSS</a></li>
+    
+    </ul>
+    
+    </li>
+
+      </ul><!--MenuBar1-->
+   </div><!--fmenu-->      
+</div><!--menupal-->
+
+<script type="text/javascript"> 
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1");
+//-->
+ </script>            
+             <div id="contenido" http-equiv="content-type" charset="utf-8">    
+            <h2>
+                Elecciones de Presidente y Vicepresidente de la Rep&uacute;blica
+            </h2>
+            <h3>Colombia - 25 de mayo de 2014</h3>
+
+
+
+		   
+            <div class="consulta_jurado">
+                <div id="form_consulta">
+                    <form action="consultar_jurados.php" method="post" id="frmconsulta">
+                        <div>Digite su n&uacute;mero de c&eacute;dula</div>
+                        <div>
+                            <input type="text" name="cedula" size="10" maxlength="10" id="cedula" value="1140847424" onkeypress="return solonumeros(event)" >
+                        </div>
+                        <div id="error_c"></div>
+                        <div>
+                            <br>
+                            <input  src="../../consultar.png" type="Image" />
+                        </div>
+                        <div style="padding:15px 0"></div>
+                    </form>
+                </div>
+
+                
+                
+                            <div id="consulta_resp" >
+                                <table  class="consulta_jurado"  >
+                                    <tr>
+                                        <td style="padding:2px 0;background-color:#298496;font-weight:bold;text-align:center;width:100%;color:white;font-size:15px;font-family: Arial,Helvetica,sans-serif;">  Usted ha sido seleccionado como jurado de votaci&oacute;n en :</td>
+                                    </tr>
+                                </table>
+                                <p style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;">Se&ntilde;or (a) <b>ALFONSO MANUEL MANCILLA ALVIS</b> con c&eacute;dula <b>1140847424</b></p>
+                                <p style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;">Usted ha sido asignado(a) como jurado de votaci&oacute;n para las elecciones de Presidente que se realizar&aacute; el domingo 25 de Mayo en el cargo de Presidente Suplente en el siguiente puesto y mesa de votaci&oacute;n:</p>
+
+                                <table class="t_jurados" border="1" style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;">
+                                    <tr>
+                                        <td>Departamento</td>
+                                        <td>ATLANTICO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Municipio</td>
+                                        <td>BARRANQUILLA</td>
+                                    </tr>   
+                                    <tr>
+                                        <td>Puesto:</td>
+
+                                        <td>COL DTAL LA SALLE</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Mesa:</td>
+                                        <td>17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direcci&oacute;n:</td>
+                                        <td>CL 70 C #18-47                                                                                    </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <div style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;">
+                                    Recuerde que debe presentarse a recibir capacitaci&oacute;n en:
+
+                                </div>
+                                <br>
+                                <table class="t_jurados" style="font-family: Arial,Helvetica,sans-serif;font-size: 12px;">   
+
+                                    <tr>
+                                        <td>Lugar:</td>
+                                        <td>UNIVERSIDAD DE ATLANTICO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direccion:</td>
+                                        <td>CRA 43 CALLE 50 SALON DE CONFERENCIA BLOQUE B PISO 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fecha y Hora:</td>
+                                        <td>05 de mayo de 2014  2:00 PM</td>
+                                    </tr>
+
+                                </table>
+                                <br>
+                                                            </div>
+
+                        
+                    
+
+
+
+

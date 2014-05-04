@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Censo</title>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="censo.css" rel="stylesheet" type="text/css" />
+<link href="reg.css" rel="stylesheet" type="text/css" />
+<script>
+        function valida(form){
+             cedula = form.nCedula.value;
+            if(cedula=="" || cedula==null){
+                alert("Ingrese c?dula");
+                return false;
+            }else{
+                filter=/^(\d{1,10})$/;
+              if(!filter.test(cedula)){
+                  alert("Ingrese c?dula valida");
+                  return false;
+              }
+            }
+            if(cedula==form.nCedulaH.value){
+              return false;
+            }else
+            return true;
+        }
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js">
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5065678-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div id="izq"><a href="http://www.registraduria.gov.co/" target="_top"><img src="images/cam1.jpg"  width="145" height="86" border="0" /></a><img src="images/cam2.jpg" alt="" width="146" height="86" border="0" /><img src="images/cam3.jpg" alt="" width="146" height="86" border="0" /><img src="images/cam4.jpg" alt="" width="165" height="86" border="0" /></div>
+    <div id="der"> <a href="http://www.registraduria.gov.co/" target="_top"><img src="images/cam5a.jpg" alt="" width="46" height="19" border="0" /></a><a href="http://www.registraduria.gov.co/Contact_form.htm" target="_top"><img src="images/cam6a.jpg"  alt="" width="60" height="19" border="0" /></a><a href="http://www.registraduria.gov.co/Informacion/sitemap.htm" target="_top"><img src="images/cam7a.jpg"  alt="" width="86" height="19" border="0" /></a><img src="images/cam5_02.jpg" alt="" width="46" height="67" border="0" /><img src="images/cam6_02.jpg" alt="" width="60" height="67" border="0" /><img src="images/cam7_02.jpg" alt="" width="86" height="67" border="0" /></div>
+  </div>
+  <div id="rHeader"></div>
+  <div id="menuIzq">
+    <div id="censocc">
+      <form action="/censo/_censoresultado.php" method="get" onsubmit="return valida(this)" name="form1" id="form1">
+        <div align="center" id="consulta01">
+          <br/><p>Digite su No de C?dula </p>
+          <p class="style1">
+        <span id="numcedula">
+        <input name="nCedula" type="text" id="nCedula" value="12345556677777777"
+        size="16" maxlength="10" />
+        <input name="nCedulaH" type="hidden" id="nCedulaH"
+        value="12345556677777777" />
+        <span class="textfieldRequiredMsg"><br />
+            Por favor digite su c?dula.</span><span class="textfieldInvalidFormatMsg"><br />
+            Formato no v?lido.</span></span></p>
+          <p class="style1">
+            <label>
+            <br />
+            <input type="image" value="Consultar" src="consultar.PNG" />
+            </label>
+          </p>
+        </div>
+        <hr />
+</form>
+    </div>
+	<!--<div style='margin-left:5px'><a href='http://www.registraduria.gov.co/IMG/pdf/DIVIPOL_DEFINITIVA_AUTORIDADES_LOCALES_OCTUBRE_2011.xls' target='_blank'><img src="images/divipol2011.jpg"></a></div>
+    <div><img src="images/e2011.jpg"></div>
+         <center><img src="http://www.easycounter.com/counter.php?censo" border="0"></center>-->
+  </div>
+  <div id="menuDer">
+    <div id="info">
+	
+		<div align="center" id="ttlo"><strong>No se encuentra en el censo para las pr?ximas elecciones.</strong></div><br/>Debe inscribirse en los per?odos que establezca la Registradur?a Nacional del Estado Civil en pr?ximas oportunidades.<br/>    </div>
+  </div>
+
+<div id="div_aviso">
+    <div id="aviso">
+        <p><b>Censo Electoral<br>El Registrador Nacional del Estado Civil</b></p>      
+		<p style="text-align:justify">Las inscripciones de c&eacute;dulas realizadas a partir del 10 de enero del 2014, solo ser&aacute;n tenidas en cuenta para las elecciones de Presidente del a&ntilde;o 2014, dichas inscripciones se pueden consultar en el siguiente enlace:</p>
+        <center><a href="http://www.registraduria.gov.co/servicios/inscripcion2013.html" target="_blank"><img src="http://www.registraduria.gov.co/IMG/consulta_incripcion.jpg"></a></center>
+        <p style="text-align:justify">Cualquier ciudadano podr? reclamar por errores u omisiones en la elaboraci?n del censo y reclamar en casos de cancelaci?n por muerte u omisi?n en su inclusi?n, a fin de que su nombre y c?dula sean incluidos en el censo. Las reclamaciones correspondientes podr?n formularse dentro del mes siguiente a la fecha de la publicaci?n en las respectivas sedes de las Registradur?as distritales, especiales, auxiliares y municipales.</p>
+        <p>
+            Mayor informaci?n:<br>
+            <a href="http://www.registraduria.gov.co">www.registraduria.gov.co</a><br>
+            L?nea Nacional: 01 8000 52 1112 o en Bogot? (1) 3578240
+        </p>
+    </div>
+</div>
+<div style='clear:both'></div>
+  <div id="bottom">
+    <p><strong>REGISTRADUR?A NACIONAL DEL ESTADO CIVIL</strong><br />
+      Avenida Calle 26 # 51-50 - CAN (Bogot? - Colombia) Conmutador: (571) 220 2880<br />
+      Horario de atenci?n: Lunes a Viernes de 8:00 a.m. a 5:00 p.m.<br />
+    </p>
+    <p align="center"> <a href="http://www.registraduria.gov.co/servicios/pol_privacidad_web.htm" target="_top">Pol?ticas de Privacidad y Condiciones de Uso</a>?   | <a href="http://www.registraduria.gov.co/servicios/preg_frec.htm" target="_top">Preguntas frecuentes</a> |? <a href="http://www.registraduria.gov.co/Elecciones/glos_elec.htm" target="_top">Glosario</a>? |? <a href="http://www.registraduria.gov.co/Contact_form.htm" target="_top">Cont?ctenos</a></p>
+  </div>
+</div>
+</body>
+</html>

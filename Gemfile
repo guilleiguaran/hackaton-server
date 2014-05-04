@@ -4,6 +4,7 @@ gem 'nancy', github: 'guilleiguaran/nancy'
 gem 'nokogiri'
 gem 'yajl-ruby'
 gem 'requests'
+gem 'rack-jsonp-middleware'
 
 gem 'rack-test'
 gem 'mocha'

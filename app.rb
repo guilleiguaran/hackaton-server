@@ -2,8 +2,11 @@ require 'nancy'
 require 'requests/sugar'
 require 'nokogiri'
 require 'yajl'
+require 'rack/jsonp'
 
 class App < Nancy::Base
+  use Rack::JSONP
+
   after do
     response['Content-Type'] = 'application/json'
   end
@@ -12,7 +15,7 @@ class App < Nancy::Base
     "Pastelitos: 8, Jugos: 12, Almuerzos: 1, Porciones de Pizza:, Sanduches:"
   end
 
-  get '/booths/:id' do
+  get '/booths/:id.json' do
     url = "http://www3.registraduria.gov.co/censo/_censoresultado.php?nCedula=#{params['id']}"
     response = Requests.get(url)
     doc = Nokogiri::HTML(response.body)
@@ -22,7 +25,7 @@ class App < Nancy::Base
     Yajl::Encoder.encode(info)
   end
 
-  get '/juries/:id' do
+  get '/juries/:id.json' do
     url = "http://190.60.255.10:81/Registraduria/vista/jurados_files/consultar_jurados.php?cedula=#{params['id']}"
     response = Requests.get(url)
     doc = Nokogiri::HTML(response.body)

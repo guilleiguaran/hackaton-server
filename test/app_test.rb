@@ -10,7 +10,7 @@ class AppTest < Minitest::Test
 
   def test_booth_with_valid_id
     stub_request(:booth_valid_id)
-    get '/booths/12345678'
+    get '/booths/12345678.json'
 
     json = Yajl::Parser.new.parse(last_response.body)
     assert_equal "BARRANQUILLA", json["Municipio:"]
@@ -19,7 +19,7 @@ class AppTest < Minitest::Test
 
   def test_booth_with_invalid_id
     stub_request(:booth_not_found_id)
-    get '/booths/12345678'
+    get '/booths/12345678.json'
 
     json = Yajl::Parser.new.parse(last_response.body)
     assert_equal "ID don't found or invalid", json["error"]
@@ -27,7 +27,7 @@ class AppTest < Minitest::Test
 
   def test_non_selected_jury
     stub_request(:non_selected_jury)
-    get '/juries/12345678'
+    get '/juries/12345678.json'
 
     json = Yajl::Parser.new.parse(last_response.body)
     assert_equal "ID wasn't selected as jury", json["error"]
@@ -35,7 +35,7 @@ class AppTest < Minitest::Test
 
   def test_selected_jury
     stub_request(:selected_jury)
-    get '/juries/12345678'
+    get '/juries/12345678.json'
 
     json = Yajl::Parser.new.parse(last_response.body)
     assert_equal "ATLANTICO", json["Departamento"]

@@ -11,10 +11,6 @@ class App < Nancy::Base
     response['Content-Type'] = 'application/json'
   end
 
-  get "/" do
-    "Pastelitos: 8, Jugos: 12, Almuerzos: 1, Porciones de Pizza:, Sanduches:"
-  end
-
   get '/booths/:id.json' do
     url = "http://www3.registraduria.gov.co/censo/_censoresultado.php?nCedula=#{params['id']}"
     response = Requests.get(url)
